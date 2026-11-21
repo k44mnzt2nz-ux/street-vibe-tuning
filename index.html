@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Street Vibe Tuning — премиум детейлинг и тюнинг в Ташкенте</title>
+<meta name="description" content="Street Vibe Tuning, Ташкент: бронепленка, полировка, керамика, детейлинг мойка, химчистка салона, шумоизоляция, PDR, тонировка и другие услуги.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07070a; --bg2:#0d0d12; --card:#111117; --line:rgba(255,255,255,.08);
+  --text:#f3f3f5; --muted:#9b9ba6; --y:#ffc20e; --y2:#ff9d00;
+  --r:18px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1200px,92%);margin:0 auto}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+.y{color:var(--y)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--y);font-weight:600;margin-bottom:18px}
+.eyebrow:before{content:"";width:34px;height:2px;background:var(--y)}
+section{padding:110px 0;position:relative}
+.sec-h{font-size:clamp(34px,5vw,60px);font-weight:600;margin-bottom:18px}
+.sec-p{color:var(--muted);max-width:620px;font-size:17px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;border:1px solid transparent;cursor:pointer;transition:.35s var(--ease);font-family:inherit}
+.btn-y{background:linear-gradient(135deg,var(--y),var(--y2));color:#111;box-shadow:0 10px 40px -10px rgba(255,194,14,.55)}
+.btn-y:hover{transform:translateY(-3px);box-shadow:0 18px 50px -10px rgba(255,194,14,.7)}
+.btn-o{border-color:rgba(255,255,255,.25);color:var(--text);background:rgba(255,255,255,.03);backdrop-filter:blur(6px)}
+.btn-o:hover{border-color:var(--y);color:var(--y);transform:translateY(-3px)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.4s var(--ease);padding:20px 0}
+nav.sc{background:rgba(7,7,10,.82);backdrop-filter:blur(16px);padding:12px 0;border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:38px;height:38px}
+.logo b{font-family:'Oswald';font-size:19px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;line-height:1}
+.logo small{display:block;font-size:10px;letter-spacing:.35em;color:var(--y);font-family:'Manrope';font-weight:600;margin-top:3px}
+.links{display:flex;gap:34px;list-style:none}
+.links a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#cfcfd6;position:relative;padding:6px 0;transition:.3s}
+.links a:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--y);transition:.35s var(--ease)}
+.links a:hover{color:#fff}.links a:hover:after{width:100%}
+.nav-cta{padding:12px 22px;font-size:12px}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:8px;right:8px;height:2px;background:#fff;transition:.3s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:25px}
+.burger.on span:nth-child(1){top:19px;transform:rotate(45deg)}
+.burger.on span:nth-child(2){top:19px;transform:rotate(-45deg)}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 90px;overflow:hidden;background:
+  radial-gradient(900px 500px at 78% 38%,rgba(255,194,14,.16),transparent 60%),
+  radial-gradient(700px 500px at 10% 100%,rgba(255,157,0,.08),transparent 60%),var(--bg)}
+.hex{position:absolute;inset:0;opacity:.5;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(46px,8vw,104px);font-weight:700;margin-bottom:26px}
+.hero h1 span{display:block}
+.hero h1 .out{-webkit-text-stroke:2px var(--y);color:transparent}
+.hero p.lead{font-size:18px;color:#bfc0c9;max-width:520px;margin-bottom:38px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-car{position:relative}
+.hero-car svg{width:100%;filter:drop-shadow(0 0 30px rgba(255,194,14,.35))}
+.hero-car .ring{position:absolute;inset:8% 4%;border-radius:50%;border:1px solid rgba(255,194,14,.2);animation:spin 30s linear infinite}
+.hero-car .ring:after{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;border-radius:50%;background:var(--y);box-shadow:0 0 14px var(--y)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--y),transparent);opacity:.7;animation:scan 5s ease-in-out infinite;filter:blur(1px)}
+@keyframes scan{0%,100%{top:20%}50%{top:80%}}
+.scroll-ind{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-ind i{width:1px;height:42px;background:linear-gradient(var(--y),transparent);animation:drip 2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:20px 0}
+.marq-t{display:flex;gap:60px;width:max-content;animation:mq 38s linear infinite}
+.marq-t span{font-family:'Oswald';font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:#6f6f7a;display:flex;align-items:center;gap:60px;white-space:nowrap}
+.marq-t span:after{content:"✦";color:var(--y);font-size:16px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* services */
+.srv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.srv{position:relative;background:linear-gradient(160deg,#14141b,#0c0c11);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px 26px;min-height:230px;overflow:hidden;transition:.45s var(--ease);display:flex;flex-direction:column}
+.srv:before{content:"";position:absolute;inset:0;background:radial-gradient(300px 200px at var(--mx,50%) var(--my,0%),rgba(255,194,14,.16),transparent 70%);opacity:0;transition:.4s}
+.srv:hover{transform:translateY(-6px);border-color:rgba(255,194,14,.45)}
+.srv:hover:before{opacity:1}
+.srv .n{font-family:'Oswald';font-size:44px;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.22);line-height:1;transition:.4s}
+.srv:hover .n{-webkit-text-stroke-color:var(--y)}
+.srv h3{font-size:21px;font-weight:600;margin:auto 0 8px;padding-top:34px;position:relative}
+.srv p{font-size:14px;color:var(--muted);position:relative}
+.srv .ar{position:absolute;right:20px;top:24px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--y);transition:.4s var(--ease)}
+.srv:hover .ar{background:var(--y);color:#111;transform:rotate(-45deg)}
+.srv.feat{grid-column:span 2;background:linear-gradient(135deg,rgba(255,194,14,.14),#0c0c11 60%);border-color:rgba(255,194,14,.3)}
+.badge{position:absolute;right:68px;top:28px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;background:var(--y);color:#111;padding:5px 10px;border-radius:999px}
+
+/* PPF split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.visual{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:
+  radial-gradient(400px 300px at 70% 20%,rgba(255,194,14,.25),transparent 65%),linear-gradient(160deg,#16161d,#09090c)}
+.visual svg.hexbg{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.visual .film{position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.1) 50%,transparent 60%);background-size:250% 100%;animation:shine 5s infinite}
+@keyframes shine{0%{background-position:150% 0}100%{background-position:-100% 0}}
+.visual .tag{position:absolute;left:22px;bottom:22px;right:22px;background:rgba(7,7,10,.7);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:14px;color:#ddd}
+.visual .tag b{color:var(--y)}
+.checks{list-style:none;margin:30px 0 36px;display:grid;gap:14px}
+.checks li{display:flex;gap:14px;align-items:flex-start;color:#d5d5dc}
+.checks li:before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--y) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12.5l4.5 4.5L19 7.5'/></svg>") center/14px no-repeat}
+.zones{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.zones span{border:1px solid rgba(255,194,14,.4);color:var(--y);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:999px;font-weight:600}
+
+/* process */
+.proc{background:var(--bg2);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;position:relative}
+.steps:before{content:"";position:absolute;top:34px;left:6%;right:6%;height:1px;background:linear-gradient(90deg,var(--y),rgba(255,194,14,.1))}
+.step{padding:0 22px;position:relative}
+.step .dot{width:68px;height:68px;border-radius:50%;background:var(--bg);border:1px solid var(--y);display:grid;place-items:center;font-family:'Oswald';font-size:24px;color:var(--y);margin-bottom:26px;position:relative;box-shadow:0 0 0 8px var(--bg2)}
+.step h3{font-size:20px;margin-bottom:10px;font-weight:600}
+.step p{font-size:14.5px;color:var(--muted)}
+
+/* gallery */
+.gal-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.car{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:300px;background:linear-gradient(160deg,#17171e,#0a0a0e);grid-column:span 4;cursor:pointer;transition:.5s var(--ease)}
+.car.w{grid-column:span 6}
+.car.t{grid-column:span 4;min-height:360px}
+.car .ph{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1s var(--ease)}
+.car:hover .ph{transform:scale(1.06)}
+.car .glow{position:absolute;inset:0;background:radial-gradient(260px 160px at 50% 55%,rgba(255,194,14,.2),transparent 70%)}
+.car svg.sil{position:absolute;left:8%;right:8%;top:50%;transform:translateY(-58%);width:84%;opacity:.85}
+.car .hexb{position:absolute;inset:0;opacity:.35}
+.car .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 22px 20px;background:linear-gradient(transparent,rgba(5,5,8,.95));display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.car .cap h3{font-size:24px;font-weight:600}
+.car .cap small{display:block;color:var(--y);letter-spacing:.2em;font-size:11px;text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.car .cap span{font-size:12px;color:#aaa;text-align:right}
+.car:hover{border-color:rgba(255,194,14,.5);transform:translateY(-5px)}
+.has-img .sil,.has-img .glow,.has-img .hexb{display:none}
+
+/* about */
+.about{background:radial-gradient(800px 400px at 0% 0%,rgba(255,194,14,.08),transparent 60%)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.about p{color:#c2c2cb;margin-bottom:18px;font-size:17px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;transition:.4s var(--ease)}
+.fact:hover{border-color:rgba(255,194,14,.4);transform:translateY(-4px)}
+.fact b{display:block;font-family:'Oswald';font-size:46px;color:var(--y);line-height:1;margin-bottom:10px;font-weight:600}
+.fact span{font-size:14px;color:var(--muted)}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:70px}
+.why div{padding:30px 26px;border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(160deg,#13131a,#0b0b0f)}
+.why h3{font-size:20px;margin-bottom:10px;font-weight:600}
+.why p{font-size:14.5px;color:var(--muted);margin:0}
+.why i{display:inline-block;width:44px;height:3px;background:var(--y);margin-bottom:20px}
+
+/* contact */
+.contact{background:var(--bg2);border-top:1px solid var(--line)}
+.c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px}
+.c-list{list-style:none;margin-top:36px;display:grid;gap:14px}
+.c-list li{display:flex;gap:16px;align-items:center;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card);transition:.35s var(--ease)}
+.c-list li:hover{border-color:rgba(255,194,14,.4);transform:translateX(6px)}
+.c-list .ic{flex:none;width:44px;height:44px;border-radius:12px;background:rgba(255,194,14,.12);color:var(--y);display:grid;place-items:center}
+.c-list small{display:block;color:var(--muted);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.c-list b{font-weight:600;font-size:16px}
+form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:36px;display:grid;gap:16px}
+form h3{font-size:26px;margin-bottom:4px}
+label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;display:grid;gap:8px}
+input,select,textarea{width:100%;background:#0a0a0e;border:1px solid var(--line);color:#fff;border-radius:12px;padding:15px 16px;font:inherit;font-size:15px;transition:.3s;outline:0}
+input:focus,select:focus,textarea:focus{border-color:var(--y);box-shadow:0 0 0 4px rgba(255,194,14,.12)}
+textarea{min-height:100px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.note{font-size:12.5px;color:var(--muted)}
+#res{display:none;background:rgba(255,194,14,.08);border:1px solid rgba(255,194,14,.35);border-radius:12px;padding:16px;font-size:14px;color:#e8e8ee;white-space:pre-wrap}
+#res.on{display:block}
+.fbtns{display:flex;gap:12px;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:13px}
+.f-in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media(max-width:1020px){
+  .srv-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid,.split,.about-grid,.c-grid{grid-template-columns:1fr;gap:44px}
+  .hero-car{order:-1;max-width:560px}
+  .steps{grid-template-columns:1fr 1fr;gap:40px 0}.steps:before{display:none}
+  .why{grid-template-columns:1fr}
+  .car,.car.w,.car.t{grid-column:span 6}
+  .visual{aspect-ratio:16/11}
+}
+@media(max-width:760px){
+  section{padding:80px 0}
+  .links{position:fixed;inset:70px 0 auto 0;background:rgba(7,7,10,.97);backdrop-filter:blur(16px);flex-direction:column;gap:0;padding:10px 6%;transform:translateY(-130%);transition:.5s var(--ease);border-bottom:1px solid var(--line)}
+  .links.on{transform:none}
+  .links a{display:block;padding:18px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}.nav-cta{display:none}
+  .srv-grid{grid-template-columns:1fr}.srv.feat{grid-column:auto}.srv{min-height:190px}
+  .steps{grid-template-columns:1fr}
+  .car,.car.w,.car.t{grid-column:span 12;min-height:280px}
+  .row{grid-template-columns:1fr}
+  .scroll-ind{display:none}
+  form{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- reusable SVG symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sedan" viewBox="0 0 420 150">
+      <g fill="none" stroke="#ffc20e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M24 108 L34 88 Q52 78 112 70 L152 42 Q176 34 236 34 L286 42 L332 70 Q376 76 392 94 L396 110 L372 116"/>
+        <path d="M24 108 L52 116 M118 116 L304 116"/>
+        <path d="M160 48 L148 70 L300 70 L276 46 Z" stroke-opacity=".6"/>
+        <path d="M226 36 L226 70" stroke-opacity=".5"/>
+        <circle cx="86" cy="116" r="26"/><circle cx="86" cy="116" r="12" stroke-opacity=".6"/>
+        <circle cx="338" cy="116" r="26"/><circle cx="338" cy="116" r="12" stroke-opacity=".6"/>
+        <path d="M356 92 L384 94 M30 96 L52 96" stroke-opacity=".7"/>
+      </g>
+    </symbol>
+    <symbol id="suv" viewBox="0 0 420 160">
+      <g fill="none" stroke="#ffc20e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M22 116 L30 86 Q40 76 96 70 L136 34 Q150 28 220 28 L292 32 L336 70 Q380 74 394 94 L398 118 L376 124"/>
+        <path d="M22 116 L52 124 M120 124 L304 124"/>
+        <path d="M144 40 L130 70 L330 70 L292 38 Z" stroke-opacity=".6"/>
+        <path d="M222 30 L222 70" stroke-opacity=".5"/>
+        <circle cx="86" cy="124" r="28"/><circle cx="86" cy="124" r="13" stroke-opacity=".6"/>
+        <circle cx="342" cy="124" r="28"/><circle cx="342" cy="124" r="13" stroke-opacity=".6"/>
+        <path d="M150 28 L300 22 L316 28" stroke-opacity=".6"/>
+      </g>
+    </symbol>
+    <symbol id="hexpat" viewBox="0 0 100 86.6">
+      <path d="M25 0h50l25 43.3L75 86.6H25L0 43.3z" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="1"/>
+    </symbol>
+    <pattern id="hp" width="100" height="173.2" patternUnits="userSpaceOnUse" patternTransform="scale(.9)">
+      <path d="M25 0h50l25 43.3L75 86.6H25L0 43.3zM75 86.6h50l25 43.3-25 43.3H75L50 129.9zM-25 86.6h50l25 43.3-25 43.3h-50L-50 129.9z" fill="none" stroke="#fff" stroke-opacity=".13"/>
+    </pattern>
+    <linearGradient id="yg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd54a"/><stop offset="1" stop-color="#ff9d00"/></linearGradient>
+  </defs>
+</svg>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo" aria-label="Street Vibe Tuning">
+      <svg viewBox="0 0 48 48"><path d="M4 6h40L24 44z" fill="url(#yg)"/><path d="M13 14h10l-3 6h8l-9 14 2-9h-7z" fill="#07070a"/></svg>
+      <span><b>Street Vibe</b><small>TUNING</small></span>
+    </a>
+    <ul class="links" id="links">
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#ppf">Бронепленка</a></li>
+      <li><a href="#process">Полировка</a></li>
+      <li><a href="#gallery">Работы</a></li>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-y nav-cta">Записаться</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="hex"><rect width="100%" height="100%" fill="url(#hp)"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow rv">Детейлинг студия · Ташкент</div>
+      <h1 class="rv d1"><span>Ваш авто —</span><span class="out">в идеале</span></h1>
+      <p class="lead rv d2">Бронепленка, керамика, полировка, PDR и полный детейлинг. Работаем с премиальной точностью и приводим кузов и салон в идеальное состояние.</p>
+      <div class="hero-btns rv d3">
+        <a href="#contact" class="btn btn-y">Записаться на услугу →</a>
+        <a href="#services" class="btn btn-o">Смотреть услуги</a>
+      </div>
+    </div>
+    <div class="hero-car rv d2">
+      <div class="ring"></div>
+      <svg viewBox="0 0 420 150"><use href="#sedan"/></svg>
+      <div class="scan"></div>
+    </div>
+  </div>
+  <div class="scroll-ind"><span>Scroll</span><i></i></div>
+</header>
+
+<div class="marq"><div class="marq-t" id="mq"></div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow rv">Что мы делаем</div>
+    <h2 class="sec-h rv d1">Услуги <span class="y">студии</span></h2>
+    <p class="sec-p rv d2">От защиты лакокрасочного покрытия до полного преображения салона. Подберём оптимальное решение именно для вашего автомобиля.</p>
+    <div class="srv-grid" id="srvGrid"></div>
+  </div>
+</section>
+
+<section id="ppf" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap split">
+    <div class="visual rv">
+      <svg class="hexbg"><rect width="100%" height="100%" fill="url(#hp)"/></svg>
+      <svg viewBox="0 0 420 150" style="position:absolute;left:6%;right:6%;top:30%;width:88%"><use href="#suv"/></svg>
+      <div class="film"></div>
+      <div class="tag"><b>Прозрачная защитная плёнка</b> практически незаметна на кузове, но берёт все удары на себя.</div>
+    </div>
+    <div>
+      <div class="eyebrow rv">Флагманская услуга</div>
+      <h2 class="sec-h rv d1">Бронепленка —<br><span class="y">инвестиция</span> в вид авто</h2>
+      <p class="sec-p rv d2">Ежедневно кузов подвергается воздействию песка, камней, дорожной химии и солнца. Со временем это приводит к сколам, царапинам и потере блеска.</p>
+      <ul class="checks rv d2">
+        <li>Защищает от сколов и царапин</li>
+        <li>Сохраняет родную краску автомобиля</li>
+        <li>Защищает от пескоструя и мелких камней</li>
+        <li>Не даёт кузову выгорать на солнце, а дорожной химии — портить покрытие</li>
+        <li>Машина дольше выглядит как новая</li>
+      </ul>
+      <div class="zones rv d3"><span>Капот</span><span>Бампер</span><span>Фары</span><span>Зеркала</span><span>Весь кузов</span></div>
+      <a href="#contact" class="btn btn-y rv d3">Подобрать защиту →</a>
+    </div>
+  </div>
+</section>
+
+<section class="proc" id="process">
+  <div class="wrap">
+    <div class="eyebrow rv">Профессиональная полировка</div>
+    <h2 class="sec-h rv d1">Как мы <span class="y">полируем</span></h2>
+    <p class="sec-p rv d2">Полировка убирает мелкие царапины и трещины, в которые попадает влага и грязь, препятствует ржавлению кузова, возвращает зеркальный блеск и усиливает яркость цвета.</p>
+    <div class="steps">
+      <div class="step rv"><div class="dot">1</div><h3>Очистка глиной</h3><p>Перед первым этапом весь автомобиль обрабатывается специальной глиной для устранения песка и вкраплений от асфальта.</p></div>
+      <div class="step rv d1"><div class="dot">2</div><h3>Проверка кузова</h3><p>Оцениваем состояние ЛКП и убеждаемся в отсутствии потёртостей. При их наличии обрабатываем повреждённое место с использованием воды.</p></div>
+      <div class="step rv d2"><div class="dot">3</div><h3>Полировка и фары</h3><p>Устраняем дефекты покрытия и восстанавливаем прозрачность фар, не доводя дело до коррозии.</p></div>
+      <div class="step rv d3"><div class="dot">4</div><h3>Финишная паста</h3><p>Нужна для ещё более гладкой и сияющей поверхности после устранения всех изъянов и подготовки.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="gal-top">
+      <div>
+        <div class="eyebrow rv">Наши работы</div>
+        <h2 class="sec-h rv d1" style="margin:0">Автомобили <span class="y">в студии</span></h2>
+      </div>
+      <p class="sec-p rv d2" style="margin:0">Работаем с самыми популярными авто Узбекистана: Chevrolet Malibu 2, Tracker, Onix, Gentra и другими.</p>
+    </div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow rv">О нас</div>
+        <h2 class="sec-h rv d1">Street Vibe <span class="y">Tuning</span></h2>
+        <p class="rv d1">Мы — студия детейлинга и тюнинга в Ташкенте. Для нас автомобиль — это не просто транспорт, а продолжение характера владельца.</p>
+        <p class="rv d2">Работаем в светлом боксе с профессиональным освещением, используем проверенные материалы и подходим к каждой машине индивидуально: от лёгкой полировки до полной оклейки бронепленкой и перешива салона.</p>
+        <p class="rv d3">Доверьте внешний вид своего авто экспертам Street Vibe Tuning — приведём его в идеальное состояние.</p>
+      </div>
+      <div class="facts rv d2">
+        <div class="fact"><b>12</b><span>направлений работ под одной крышей</span></div>
+        <div class="fact"><b>PPF</b><span>защита кузова от сколов и царапин</span></div>
+        <div class="fact"><b>PDR</b><span>удаление вмятин без покраски</span></div>
+        <div class="fact"><b>100%</b><span>индивидуальный подбор решения</span></div>
+      </div>
+    </div>
+    <div class="why">
+      <div class="rv"><i></i><h3>Внимание к деталям</h3><p>Каждый этап контролируется при профессиональном свете — дефекты не скрыть.</p></div>
+      <div class="rv d1"><i></i><h3>Всё в одном месте</h3><p>Кузовные работы, защита, салон, шумоизоляция и тонировка — не нужно ездить по разным студиям.</p></div>
+      <div class="rv d2"><i></i><h3>Подход под ваш авто</h3><p>Подбираем материалы и объём работ под конкретную машину и ваш бюджет.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap c-grid">
+    <div>
+      <div class="eyebrow rv">Контакты</div>
+      <h2 class="sec-h rv d1">Запишитесь <span class="y">на визит</span></h2>
+      <p class="sec-p rv d2">Опишите автомобиль и желаемую услугу — мы подберём оптимальное решение и подскажем по срокам.</p>
+      <ul class="c-list rv d2" id="cList"></ul>
+    </div>
+    <form id="form" class="rv d2" autocomplete="off">
+      <h3>Заявка на услугу</h3>
+      <div class="row">
+        <label>Имя<input id="fn" required placeholder="Как к вам обращаться"></label>
+        <label>Телефон<input id="fp" required placeholder="+998 __ ___ __ __" inputmode="tel"></label>
+      </div>
+      <div class="row">
+        <label>Автомобиль<select id="fc">
+          <option>Chevrolet Malibu 2</option><option>Chevrolet Tracker</option><option>Chevrolet Onix</option>
+          <option>Chevrolet Gentra</option><option>Chevrolet Cobalt</option><option>Chevrolet Equinox</option><option>Другой</option></select></label>
+        <label>Услуга<select id="fs"></select></label>
+      </div>
+      <label>Комментарий<textarea id="fm" placeholder="Расскажите, что хотите сделать"></textarea></label>
+      <div class="fbtns">
+        <button class="btn btn-y" type="submit">Сформировать заявку</button>
+        <a class="btn btn-o" id="igBtn" target="_blank" rel="noopener" href="https://www.instagram.com/street_vibe_tuning_">Написать в Instagram</a>
+      </div>
+      <div id="res"></div>
+      <p class="note">Заявка формируется текстом — скопируйте её и отправьте нам в Instagram или Telegram.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f-in">
+    <div>© <span id="yr"></span> Street Vibe Tuning. Все права защищены.</div>
+    <div>Ташкент · <a href="https://www.instagram.com/street_vibe_tuning_" target="_blank" rel="noopener" style="color:var(--y)">@street_vibe_tuning_</a></div>
+  </div>
+</footer>
+
+<script>
+/* ===== НАСТРОЙКИ — меняйте здесь ===== */
+const CONFIG = {
+  instagram: "https://www.instagram.com/street_vibe_tuning_",
+  instagramName: "@street_vibe_tuning_",
+  phone: "",      // например "+998 90 123 45 67" — появится в контактах
+  telegram: "",   // например "https://t.me/username"
+  address: "Ташкент", // впишите точный адрес
+  hours: ""       // например "Ежедневно 09:00–20:00"
+};
+/* Фото авто: вставьте ссылку на фото в img (например "photos/malibu.jpg") */
+const CARS = [
+  {name:"Chevrolet Malibu 2", tag:"Бронепленка · Полировка", type:"sedan", w:true,  img:""},
+  {name:"Chevrolet Tracker",  tag:"Керамика · Детейлинг",    type:"suv",   w:true,  img:""},
+  {name:"Chevrolet Onix",     tag:"Полировка · Керамика",    type:"sedan", img:""},
+  {name:"Chevrolet Gentra",   tag:"Химчистка салона",        type:"sedan", img:""},
+  {name:"Chevrolet Equinox",  tag:"Антихром · Тонировка",    type:"suv",   img:""},
+  {name:"Chevrolet Cobalt",   tag:"PDR · Кузовные работы",   type:"sedan", w:true, img:""},
+  {name:"Chevrolet Nexia 3",  tag:"Шумоизоляция",            type:"sedan", w:true, img:""}
+];
+const SERVICES = [
+  ["Бронепленка","Прозрачная защита кузова от сколов, царапин и пескоструя.",true],
+  ["Полировка","Убираем мелкие царапины, возвращаем зеркальный блеск и яркость цвета.",true],
+  ["Керамика","Керамическое покрытие: глубокий глянец и защита от реагентов."],
+  ["Детейлинг мойка","Бережная глубокая мойка кузова, дисков и арок."],
+  ["Химчистка салона","Глубокая очистка кожи, ткани, потолка и пластика."],
+  ["Шумоизоляция","Тишина в салоне: двери, пол, арки, багажник."],
+  ["Кузовные работы","Ремонт и подготовка кузова с аккуратной покраской."],
+  ["PDR","Удаление вмятин без покраски, с сохранением родного ЛКП."],
+  ["Антихром","Чёрные молдинги, решётки и накладки вместо хрома."],
+  ["Реставрация кузовных элементов","Восстановление фар, бамперов, пластика и деталей кузова."],
+  ["Пошив салона","Индивидуальный перешив сидений, дверных карт и панелей."],
+  ["Тонировка","Качественная плёнка для комфорта и приватности."]
+];
+
+/* marquee */
+const mq=document.getElementById('mq');
+const mqHtml=SERVICES.map(s=>`<span>${s[0]}</span>`).join('');
+mq.innerHTML=mqHtml+mqHtml;
+
+/* services */
+const grid=document.getElementById('srvGrid');
+const arrow='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+grid.innerHTML=SERVICES.map((s,i)=>`
+  <a href="#contact" class="srv rv ${s[2]?'feat':''}" data-s="${s[0]}" style="transition-delay:${(i%4)*.07}s">
+    <div class="n">${String(i+1).padStart(2,'0')}</div>
+    ${s[2]?'<span class="badge">Популярно</span>':''}
+    <span class="ar">${arrow}</span>
+    <h3>${s[0]}</h3><p>${s[1]}</p>
+  </a>`).join('');
+grid.querySelectorAll('.srv').forEach(c=>{
+  c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')});
+  c.addEventListener('click',()=>{document.getElementById('fs').value=c.dataset.s});
+});
+document.getElementById('fs').innerHTML=SERVICES.map(s=>`<option>${s[0]}</option>`).join('');
+
+/* gallery */
+document.getElementById('gal').innerHTML=CARS.map((c,i)=>`
+  <div class="car rv ${c.w?'w':''} ${c.img?'has-img':''}" style="transition-delay:${(i%3)*.08}s">
+    ${c.img?`<div class="ph" style="background-image:url('${c.img}')"></div>`:''}
+    <div class="glow"></div>
+    <svg class="hexb"><rect width="100%" height="100%" fill="url(#hp)"/></svg>
+    <svg class="sil" viewBox="0 0 420 150"><use href="#${c.type}"/></svg>
+    <div class="cap"><div><small>${c.tag}</small><h3>${c.name}</h3></div><span>Street Vibe<br>Tuning</span></div>
+  </div>`).join('');
+
+/* contacts */
+const ico={
+ ig:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+ pin:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+ ph:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
+ tg:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/></svg>',
+ cl:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'};
+const items=[];
+items.push(`<li><span class="ic">${ico.ig}</span><div><small>Instagram</small><a href="${CONFIG.instagram}" target="_blank" rel="noopener"><b>${CONFIG.instagramName}</b></a></div></li>`);
+items.push(`<li><span class="ic">${ico.pin}</span><div><small>Адрес</small><b>${CONFIG.address}</b></div></li>`);
+if(CONFIG.phone) items.push(`<li><span class="ic">${ico.ph}</span><div><small>Телефон</small><a href="tel:${CONFIG.phone.replace(/[^+\d]/g,'')}"><b>${CONFIG.phone}</b></a></div></li>`);
+if(CONFIG.telegram) items.push(`<li><span class="ic">${ico.tg}</span><div><small>Telegram</small><a href="${CONFIG.telegram}" target="_blank" rel="noopener"><b>Написать в Telegram</b></a></div></li>`);
+if(CONFIG.hours) items.push(`<li><span class="ic">${ico.cl}</span><div><small>Режим работы</small><b>${CONFIG.hours}</b></div></li>`);
+document.getElementById('cList').innerHTML=items.join('');
+document.getElementById('igBtn').href=CONFIG.instagram;
+
+/* form */
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const txt=`Здравствуйте! Хочу записаться в Street Vibe Tuning.\nИмя: ${v('fn')}\nТелефон: ${v('fp')}\nАвто: ${v('fc')}\nУслуга: ${v('fs')}${v('fm')?'\nКомментарий: '+v('fm'):''}`;
+  const r=document.getElementById('res');
+  r.textContent=txt+'\n\n(нажмите, чтобы скопировать)';r.classList.add('on');r.style.cursor='pointer';
+  r.onclick=()=>{try{navigator.clipboard.writeText(txt);r.textContent=txt+'\n\n✓ Скопировано — отправьте нам в Instagram'}catch(_){}};
+});
+
+/* nav */
+const nav=document.getElementById('nav'),links=document.getElementById('links'),bg=document.getElementById('burger');
+addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>40),{passive:true});
+bg.onclick=()=>{bg.classList.toggle('on');links.classList.toggle('on')};
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>{bg.classList.remove('on');links.classList.remove('on')});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
