@@ -1,1 +1,3 @@
-https://svt-orders.pro100krasava08.workers.dev
+window.APP_CONFIG = {
+  apiUrl: "https://svt-orders.pro100krasava08.workers.dev"
+};
